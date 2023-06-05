@@ -15,15 +15,23 @@
 
         <div id="vue" class="container d-flex align-items-center justufy-content-center">
             <div class="img-container d-flex align-items-center justify-content-center">
-                <div class="button button-left"><i class="fa-solid fa-hand-point-left"></i></div>
+
+                <div class="button button-left" @click="previousImg()">
+                    <i class="fa-solid fa-hand-point-left"></i>
+                </div>
+
                 <div class="wrapper">
                     <img :src="images[activeIndex].image" alt="">
                     <div class="text-wrapper">
-                        <h1 class="title"></h1>
-                        <p class="text"></p>
+                        <h1 class="title"> {{images[activeIndex].title}}</h1>
+                        <p class="text">{{images[activeIndex].text}}</p>
                     </div>
                 </div>
-                <div class="button button-right"><i class="fa-solid fa-hand-point-right"></i></div>
+
+                <div class="button button-right" @click="nextImg()">
+                    <i class="fa-solid fa-hand-point-right"></i>
+                </div>
+
             </div>
         </div>
         
